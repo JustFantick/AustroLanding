@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import StartScreen from './startScreen/startScreen.jsx';
 
-export default class App extends Component {
-	render() {
-		return (
-			<div className="wrapper">
-				<div className="wrapper__container">
-					Hello world
-				</div>
-			</div>
-		);
-	}
+export default function App() {
+	const [counter, setCounter] = useState(0);
+
+	return (
+		<div className="wrapper">
+			<StartScreen />
+		</div>
+	)
 }

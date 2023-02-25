@@ -1,8 +1,10 @@
 @import url('./nullstyle');
-@import url('../fonts/fonts.less');
-//@import url('../fonts/icons-font.less');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
 @import url('./useful.less');
+
+body {
+	font-family: 'Inter', sans-serif;
+}
 
 .wrapper {
 	width: 100%;
@@ -11,8 +13,7 @@
 
 	background-color: gray;
 	color: black;
-
-	&__container {}
 }
 
 @import url('./FUBs.less'); //frequently used blocks
+@import url('../components/startScreen/startScreen.less');
