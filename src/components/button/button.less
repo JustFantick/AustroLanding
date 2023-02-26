@@ -1,0 +1,59 @@
+.change-theme-btn {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	align-items: center;
+
+	padding: 12px 20px;
+	border-width: 1px;
+	border-style: solid;
+
+	border-radius: 30px;
+
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		transition: all 0.5s ease-in-out;
+		position: absolute;
+		top: 0;
+		z-index: -1;
+		height: 100%;
+		width: 50%;
+	}
+}
+
+body {
+	&.light .change-theme-btn {
+		border-color: white;
+
+		&::after {
+			left: 0;
+			background-color: white;
+		}
+
+		.change-theme-btn__dark {
+			color: rgba(255, 255, 255, 0.75);
+		}
+	}
+
+	&.dark .change-theme-btn {
+		border-color: black;
+
+		&::after {
+			left: 50%;
+			background-color: black;
+		}
+
+		.change-theme-btn__dark {
+			color: white;
+		}
+
+		.change-theme-btn__lignt {
+			color: rgba(0, 0, 0, 0.75);
+		}
+	}
+}

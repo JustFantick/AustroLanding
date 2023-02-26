@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../button/button.jsx';
 
 export default function StartScreen() {
 	return (
@@ -16,19 +17,18 @@ export default function StartScreen() {
 						<div className="nav__item">team</div>
 						<div className="nav__item">contacts</div>
 					</nav>
-					<div className="header__theme change-theme-btn">
-						<span className="change-theme-btn__lignt">Light</span>
-						<span className="change-theme-btn__dark">Dark</span>
-
+					<div className="header__theme">
+						<Button />
 					</div>
 
 				</header>
+
 				<h1 className="start-screen__title main-title">
 					<span>we</span> transform ideas into digital outcomes
 				</h1>
 
 				<div className="start-screen__footer start-screen-footer">
-					<a className="start-screen-footer__item" href="mailto:kotelevskijdanil0@gmail.com">kotelevskijdanil0@gmail.com
+					<a className="start-screen-footer__item" href="mailto:kotelevskijdanil0@gmail.com">authorsEmail@gmail.com
 					</a>
 					<div className="start-screen-footer__item">N 46° 8' W 25° 52'</div>
 					<div className="start-screen-footer__item">Office time 17:23:36</div>

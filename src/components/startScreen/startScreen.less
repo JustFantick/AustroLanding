@@ -25,6 +25,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: stretch;
+		gap: 25px;
 
 		>div,
 		>h1,
@@ -40,49 +41,117 @@
 
 .header {
 	display: flex;
-	justify-content: space-between;
 
 	&__logo {
+		flex: 0 0 @gridFrstCol;
 		font-style: italic;
 		font-size: #adapt(75, 28)[@value];
 		font-weight: 400;
 		color: #367848;
+	}
 
+	&__menu {
+		flex: 0 0 @gridScndCol;
+	}
+
+	&__theme {
+		flex: 0 0 @gridThrdtCol;
+
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
+
+	@media (max-width: 750px) {
+
+		&__logo,
+		&__menu,
+		&__theme {
+			flex: 1 1 33.333%;
+		}
+	}
+
+	@media (max-width: 420px) {
+		display: grid;
+
+		&__logo {
+			grid-area: logo;
+		}
+
+		&__theme {
+			grid-area: theme;
+		}
+
+		&__menu {
+			grid-area: menu;
+		}
+
+		grid-template: auto / 1fr 1fr;
+		grid-template-areas: 'logo theme' 'menu menu';
+		row-gap: 15px;
 	}
 }
 
-.main-title {
-	span {
-		font-style: italic;
-	}
+.nav {
+	&__item {
+		transition: all 0.3s ease-in-out;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.07;
+		text-transform: uppercase;
+		color: #f7f7f7;
 
-	font-weight: 300;
-	font-size: #adapt(120, 32)[@value];
-	line-height: 1.05;
-	color: #f7f7f7;
-	text-transform: uppercase;
+		&:hover {
+			color: gray;
+		}
+
+		cursor: pointer;
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .start-screen-footer {
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
 
 	&__item {
+		white-space: nowrap;
 
 		&:first-child {
-			flex: 0 0 37%;
+			flex: 0 0 @gridFrstCol;
 		}
 
 		&:last-child {
-			flex: 0 0 28%;
+			flex: 0 0 @gridThrdtCol;
 		}
 
-		flex: 1 1 auto;
+		flex: 1 1 @gridScndCol;
 
 
 		font-weight: 400;
 		font-size: #adapt(22, 12)[@value];
 		line-height: 1.5;
 		color: #F7F7F7;
+	}
+
+	@media (max-width: 670px) {
+		&__item {
+			flex: 0 0 33.333%;
+
+			&:first-child,
+			&:last-child {
+				flex: 0 0 33.333%;
+			}
+		}
+	}
+
+	@media (max-width: 580px) {
+		gap: 15px;
+		justify-content: space-between;
 	}
 }
