@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Button() {
+export default function SwitchButton() {
 	function changeThemeHandler(e) {
 		const body = document.querySelector('body');
 		if (body.classList.contains('light')) {

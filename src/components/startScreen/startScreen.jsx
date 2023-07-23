@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../button/button.jsx';
+import SwitchButton from '../switchButton/SwitchButton.jsx';
 
 export default function StartScreen() {
 	return (
@@ -18,7 +18,7 @@ export default function StartScreen() {
 						<div className="nav__item">contacts</div>
 					</nav>
 					<div className="header__theme">
-						<Button />
+						<SwitchButton />
 					</div>
 
 				</header>
