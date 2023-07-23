@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SwitchButton from '../switchButton/SwitchButton.jsx';
+import { useStore } from '../../store/store.js';
 
 export default function StartScreen() {
+	const time = useStore(state => state.localTime);
+	const updateTime = useStore(state => state.unpdateLocalTime);
+
+	useEffect(() => {
+		updateTime();
+		setInterval(updateTime, 1000);
+	}, []);
+
 	return (
 		<main className='start-screen'>
 			<img className="start-screen__bg" src={require('../../img/startScreenBg.jpg')} alt="startScreenBg" />
@@ -31,7 +40,7 @@ export default function StartScreen() {
 					<a className="start-screen-footer__item" href="mailto:kotelevskijdanil0@gmail.com">authorsEmail@gmail.com
 					</a>
 					<div className="start-screen-footer__item">N 46° 8' W 25° 52'</div>
-					<div className="start-screen-footer__item">Office time 17:23:36</div>
+					<div className="start-screen-footer__item">Office time: {time}</div>
 				</div>
 			</div>
 
