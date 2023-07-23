@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import StartScreen from './startScreen/startScreen.jsx';
+import { useStore } from '../store/store.js';
 
 export default function App() {
-	const [counter, setCounter] = useState(0);
+	const theme = useStore(state => state.theme);
 
 	return (
-		<div className="wrapper">
+		<div className={`wrapper ${theme}`}>
 			<StartScreen />
 		</div>
 	)
