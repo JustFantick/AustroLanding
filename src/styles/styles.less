@@ -11,9 +11,19 @@ body {
 	min-height: 100vh;
 	overflow: hidden;
 
-	background-color: gray;
-	color: black;
+	transition: all 0.3s ease-in-out;
+
+	&.dark {
+		background-color: @darkBlue;
+		color: @white;
+	}
+
+	&.light {
+		background-color: #fff;
+		color: @darkBlue;
+	}
 }
 
 @import url('../components/startScreen/startScreen.less');
 @import url('../components/switchButton/switchButton.less');
+@import url('../components/about/about.less');
