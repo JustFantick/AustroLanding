@@ -1,7 +1,6 @@
 //Adaptive value
 #adapt(@pcSize, @mobSize, @dependWidth: 1920) {
 	@sizeDiff: @pcSize - @mobSize;
-
 	@value: calc(@mobSize * 1px + (@pcSize - @mobSize) * ((100vw - 320px) / (@dependWidth - 320)));
 }
 
@@ -9,6 +8,14 @@
 @gridFrstCol: 33.333%;
 @gridScndCol: 44.444%;
 @gridThrdtCol: 22.222%;
+
+//(sections margin)/2
+@sectionMargin: 6.25vh;
+
+//colors
+@green: #367848;
+@white: #f7f7f7;
+@darkBlue: #131D29;
 
 //Frequently used blocks
 .main-title {
@@ -19,6 +26,6 @@
 	font-weight: 300;
 	font-size: #adapt(120, 32)[@value];
 	line-height: 1.05;
-	color: #f7f7f7;
+	color: @white;
 	text-transform: uppercase;
 }
