@@ -27,3 +27,46 @@ body {
 @import url('../components/startScreen/startScreen.less');
 @import url('../components/switchButton/switchButton.less');
 @import url('../components/about/about.less');
+
+//Frequently used blocks
+.main-title {
+	span {
+		font-style: italic;
+	}
+
+	font-weight: 300;
+	font-size: #adapt(120, 32)[@value];
+	line-height: 1.05;
+	color: @white;
+	text-transform: uppercase;
+}
+
+.section-title {
+	font-family: 'Inter';
+	font-size: #adapt(90, 40)[@value];
+	font-style: normal;
+	font-weight: 300;
+	line-height: 1.07;
+	letter-spacing: -4.05px;
+	text-transform: uppercase;
+}
+
+.generic-text {
+	font-family: 'Inter';
+	font-size: #adapt(18, 16)[@value];
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	letter-spacing: -0.81px;
+}
+
+.generic-title {
+	color: @white;
+	font-family: 'Inter';
+	font-size: #adapt(36, 24)[@value];
+	font-style: normal;
+	font-weight: 400;
+	line-height: 107.023%;
+	letter-spacing: -1.62px;
+	text-transform: uppercase;
+}
