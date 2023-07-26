@@ -1,5 +1,5 @@
 .about {
-	padding: calc(@sectionMargin*2) 3vw @sectionMargin 3vw;
+	padding: calc(@sectVerticalPadding*2) @sectHorizontPadding @sectVerticalPadding @sectHorizontPadding;
 
 	display: grid;
 	grid-template-columns: @gridFrstCol @gridScndCol @gridThrdtCol;
@@ -40,27 +40,11 @@
 	gap: #adapt(50, 20)[@value];
 
 	&__title {
-		font-family: 'Inter';
-		font-size: #adapt(90, 40)[@value];
-		font-style: normal;
-		font-weight: 300;
-		line-height: 1.07;
-		letter-spacing: -4.05px;
-		text-transform: uppercase;
 		margin-bottom: #adapt(20, 5)[@value];
 	}
 
-	&__description p {
-		font-family: 'Inter';
-		font-size: #adapt(18, 16)[@value];
-		font-style: normal;
-		font-weight: 300;
-		line-height: normal;
-		letter-spacing: -0.81px;
-
-		&:not(:last-child) {
-			margin-bottom: #adapt(18, 16)[@value];
-		}
+	&__description p:not(:last-child) {
+		margin-bottom: #adapt(18, 16)[@value];
 	}
 }
 

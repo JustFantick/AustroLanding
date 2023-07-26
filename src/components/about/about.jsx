@@ -12,10 +12,10 @@ export default function About() {
 				We are an innovative global real estate investment management company unlike any other.
 			</div>
 			<div className="about__main-column about-main-column">
-				<h2 className="about-main-column__title">what we do</h2>
+				<h2 className="about-main-column__title section-title">what we do</h2>
 				<div className="about-main-column__description">
-					<p>We leverage our breadth of asset classes, vertically integrated services, unique business model, and in-house development and management expertise to deliver exceptional results, experiences and environments.</p>
-					<p>We craft high-quality, customized built environments that enhance the experiences of those who live and work in them, while driving value for our capital partners.</p>
+					<p className='generic-text'>We leverage our breadth of asset classes, vertically integrated services, unique business model, and in-house development and management expertise to deliver exceptional results, experiences and environments.</p>
+					<p className='generic-text'>We craft high-quality, customized built environments that enhance the experiences of those who live and work in them, while driving value for our capital partners.</p>
 				</div>
 				<div className="about-main-column__numbers">
 					<div className="number-section"><span>17</span> years in business</div>
