@@ -8,7 +8,7 @@ export default function About() {
 				backgroundImage: `url(${background})`
 			}}
 		>
-			<div className="about__sub-column">
+			<div className="about__sub-column generic-article">
 				We are an innovative global real estate investment management company unlike any other.
 			</div>
 			<div className="about__main-column about-main-column">
