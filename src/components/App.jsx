@@ -5,6 +5,7 @@ import { useStore } from '../store/store.js';
 import About from './about/about.jsx';
 import Services from './services/services.jsx';
 import Projects from './projects/projects.jsx';
+import StepsSection from './stepsSection/stepsSection.jsx';
 
 export default function App() {
 	const theme = useStore(state => state.theme);
@@ -15,6 +16,7 @@ export default function App() {
 			<About />
 			<Services />
 			<Projects />
+			<StepsSection />
 		</div>
 	)
 }
