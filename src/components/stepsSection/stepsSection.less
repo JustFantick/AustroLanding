@@ -1,0 +1,35 @@
+@import url('../../styles/useful.less');
+
+.steps {
+	padding: @sectVerticalPadding @sectHorizontPadding;
+
+	&__title {
+		margin-bottom: calc(@sectVerticalPadding/2);
+		padding-left: @gridFrstCol;
+
+		@media (max-width: 1100px) {
+			padding-left: 0;
+		}
+	}
+}
+
+.steps-container {
+	display: grid;
+	grid-template-columns: @gridFrstCol @gridScndCol @gridThrdtCol;
+	grid-template-rows: 1fr 1fr;
+	row-gap: #adapt(30, 20)[@value];
+
+	@media (max-width: 1100px) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(3, auto);
+
+		@media (max-width: 700px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(5, auto);
+		}
+	}
+
+	&>* {
+		margin: 0 10px;
+	}
+}
