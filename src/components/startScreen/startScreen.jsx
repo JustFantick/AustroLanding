@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import './startScreen.less';
+
 import SwitchButton from '../switchButton/SwitchButton.jsx';
 import { useStore } from '../../store/store.js';
 

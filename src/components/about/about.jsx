@@ -1,4 +1,5 @@
 import React from 'react';
+import './about.less';
 import background from "../../img/map.png";
 
 export default function About() {

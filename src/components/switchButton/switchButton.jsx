@@ -1,4 +1,5 @@
 import React from 'react';
+import './switchButton.less';
 import { useStore } from '../../store/store';
 
 export default function SwitchButton() {
