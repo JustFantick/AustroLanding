@@ -49,7 +49,53 @@ const store = (set, get) => ({
 				return { ...item, chosen: true };
 			}
 		})
-	})
+	}),
+
+	projectsList: [
+		{
+			empty: false,
+			imgName: 'project1.png',
+			title: 'project 1',
+		},
+		{
+			empty: false,
+			imgName: 'project2.png',
+			title: 'project 2',
+		},
+		{
+			empty: false,
+			imgName: 'project3.png',
+			title: 'project 3',
+		},
+		{
+			empty: false,
+			imgName: 'project4.png',
+			title: 'project 4',
+		},
+		{
+			empty: false,
+			imgName: 'project5.png',
+			title: 'project 5',
+		},
+		{
+			empty: true,
+			imgName: '',
+			title: '',
+		},
+		{
+			empty: true,
+			imgName: '',
+			title: '',
+		},
+		{
+			imgName: 'project6.png',
+			title: 'project 6',
+		},
+		{
+			imgName: 'project7.png',
+			title: 'project 7',
+		}
+	],
 });
 
 export const useStore = create(store);
