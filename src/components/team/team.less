@@ -1,0 +1,61 @@
+@import url('../../styles/useful.less');
+
+//Necessary styles for slider
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
+@import url("https: //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
+
+.team {
+	padding: @sectVerticalPadding @sectHorizontPadding;
+
+	&__title {
+		margin-bottom: @sectVerticalPadding;
+		padding-left: @gridFrstCol;
+
+		@media (max-width: 1100px) {
+			padding-left: 0;
+		}
+	}
+}
+
+.slider-slide {
+	padding: 0 10px;
+	cursor: pointer;
+
+	img {
+		transition: all 0.3s ease-in-out;
+		height: #adapt(450, 200)[@value];
+		max-width: #adapt(400, 300)[@value];
+		object-fit: cover;
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-family: 'Inter';
+		font-size: #adapt(22, 16)[@value];
+		font-weight: 400;
+		line-height: 1.07;
+		letter-spacing: -0.99px;
+		text-transform: uppercase;
+	}
+
+	@media (max-width: 1100px) {
+		max-width: 300px;
+
+		img {
+			width: 100%;
+		}
+
+		@media (max-width: 768px) {
+			display: flex !important;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+.slick-center {
+	img {
+		height: #adapt(500, 250)[@value];
+	}
+}
