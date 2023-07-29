@@ -96,6 +96,25 @@ const store = (set, get) => ({
 			title: 'project 7',
 		}
 	],
+
+	teamMembers: [
+		{
+			imgName: 'member1.png',
+			name: 'Adam Smith',
+		},
+		{
+			imgName: 'member2.png',
+			name: 'Mariya Lopez',
+		},
+		{
+			imgName: 'member3.png',
+			name: 'paul adams',
+		},
+		{
+			imgName: 'member4.jpg',
+			name: 'laura gibson',
+		},
+	],
 });
 
 export const useStore = create(store);
