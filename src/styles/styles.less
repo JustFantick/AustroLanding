@@ -57,7 +57,6 @@ body {
 }
 
 .generic-title {
-	color: @white;
 	font-family: 'Inter';
 	font-size: #adapt(36, 24)[@value];
 	font-style: normal;
@@ -65,6 +64,16 @@ body {
 	line-height: 107.023%;
 	letter-spacing: -1.62px;
 	text-transform: uppercase;
+}
+
+.wrapper {
+	&.dark .generic-title {
+		color: @white;
+	}
+
+	&.light .generic-title {
+		color: @darkBlue;
+	}
 }
 
 .generic-article {
