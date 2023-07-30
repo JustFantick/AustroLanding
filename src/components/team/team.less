@@ -2,7 +2,7 @@
 
 //Necessary styles for slider
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
-@import url("https: //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
+//@import url("https: //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 
 .team {
 	padding: @sectVerticalPadding @sectHorizontPadding;
@@ -57,5 +57,49 @@
 .slick-center {
 	img {
 		height: #adapt(500, 250)[@value];
+	}
+}
+
+.wrapper {
+	.custom-dots {
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+
+		li {
+			& button {
+				transition: all 0.2s ease;
+				@btnSize: 10px;
+				font-size: 0;
+				height: @btnSize;
+				width: @btnSize;
+				border-radius: 50%;
+			}
+
+			&.slick-active button {
+				transform: scale(1.3);
+			}
+		}
+	}
+
+
+	&.dark .custom-dots li {
+		& button {
+			background-color: white;
+		}
+
+		&.slick-active button {
+			background-color: @green;
+		}
+	}
+
+	&.light .custom-dots li {
+		& button {
+			background-color: @darkBlue;
+		}
+
+		&.slick-active button {
+			background-color: @green;
+		}
 	}
 }

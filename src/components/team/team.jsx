@@ -32,7 +32,7 @@ export default function Team() {
 								padding: "10px"
 							}}
 						>
-							<ul style={{
+							<ul className='custom-dots' style={{
 								margin: "0px",
 							}}>{dots}</ul>
 						</div>
@@ -49,6 +49,18 @@ export default function Team() {
 					slidesToScroll: 1,
 					initialSlide: 0,
 					dots: true,
+					appendDots: dots => (
+						<div
+							style={{
+								backgroundColor: "transparent",
+								padding: "10px"
+							}}
+						>
+							<ul className='custom-dots' style={{
+								margin: "0px",
+							}}>{dots}</ul>
+						</div>
+					),
 				}
 			},
 			{
@@ -61,6 +73,18 @@ export default function Team() {
 					slidesToScroll: 1,
 					initialSlide: 0,
 					dots: true,
+					appendDots: dots => (
+						<div
+							style={{
+								backgroundColor: "transparent",
+								padding: "10px"
+							}}
+						>
+							<ul className='custom-dots' style={{
+								margin: "0px",
+							}}>{dots}</ul>
+						</div>
+					),
 				}
 			},
 		],

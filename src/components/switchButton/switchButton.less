@@ -1,3 +1,5 @@
+@import url('../../styles/useful.less');
+
 .change-theme-btn {
 	cursor: pointer;
 	display: flex;
@@ -14,6 +16,8 @@
 	position: relative;
 	z-index: 10;
 	overflow: hidden;
+
+	transition: border-color 0.3s linear 0.2s;
 
 	&::after {
 		content: '';
@@ -38,6 +42,10 @@
 		.change-theme-btn__dark {
 			color: rgba(255, 255, 255, 0.75);
 		}
+
+		.change-theme-btn__lignt {
+			color: rgba(0, 0, 0, 0.75);
+		}
 	}
 
 	&.dark .change-theme-btn {
@@ -49,7 +57,7 @@
 		}
 
 		.change-theme-btn__dark {
-			color: white;
+			color: @white;
 		}
 
 		.change-theme-btn__lignt {
