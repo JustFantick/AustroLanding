@@ -1,0 +1,21 @@
+@import url('../../styles/useful.less');
+
+.green-sircle-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@squareSize: #adapt(140, 80)[@value];
+	height: @squareSize;
+	width: @squareSize;
+
+	background-color: @green;
+	border-radius: 50%;
+
+	font-family: 'Inter';
+	color: @white;
+	font-size: #adapt(18, 12)[@value];
+	font-weight: 500;
+	line-height: 1.07;
+	text-transform: uppercase;
+}

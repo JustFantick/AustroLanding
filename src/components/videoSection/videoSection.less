@@ -1,0 +1,46 @@
+@import url('../../styles/useful.less');
+
+.video-section {
+	padding: @sectVerticalPadding @sectHorizontPadding;
+
+	&__body {
+		padding-left: @gridFrstCol;
+
+		@media (max-width: 1100px) {
+			padding-left: 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: @sectVerticalPadding;
+
+		font-family: 'Inter';
+		font-size: #adapt(56, 19.5)[@value];
+		font-style: normal;
+		font-weight: 300;
+		line-height: 100.023%;
+		text-transform: uppercase;
+
+		&::first-letter {
+			margin-left: #adapt(100, 25)[@value];
+		}
+	}
+
+	&__video {
+		max-width: 1200px;
+
+		img {
+			max-width: 100%;
+			object-fit: contain;
+		}
+
+		position: relative;
+
+		&>*:not(img) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
