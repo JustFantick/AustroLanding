@@ -8,6 +8,7 @@ import Projects from './projects/projects.jsx';
 import StepsSection from './stepsSection/stepsSection.jsx';
 import Team from './team/team.jsx';
 import VideoSection from './videoSection/videoSection.jsx';
+import ContactsSection from './contactsSection/contactsSection.jsx';
 
 export default function App() {
 	const theme = useStore(state => state.theme);
@@ -21,6 +22,7 @@ export default function App() {
 			<StepsSection />
 			<Team />
 			<VideoSection />
+			<ContactsSection />
 		</div>
 	)
 }
