@@ -1,0 +1,37 @@
+@import url('../../styles/useful.less');
+
+.contacts-section {
+	padding: @sectVerticalPadding @sectHorizontPadding;
+
+	&__body {
+		display: grid;
+		grid-template-columns: @gridFrstCol @gridScndCol @gridThrdtCol;
+		grid-template-rows: auto;
+	}
+
+	&__title {
+		padding-left: @gridFrstCol;
+		margin-bottom: @sectVerticalPadding;
+	}
+
+	&__article {
+		max-width: 213px;
+	}
+
+
+
+	@media (max-width: 1100px) {
+		&__body {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+
+		&__title {
+			padding-left: 0px;
+		}
+
+		&__article {
+			max-width: none;
+		}
+	}
+}
