@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './startScreen.less';
 
+import Navigation from '../navigation/navigation.jsx';
 import SwitchButton from '../switchButton/SwitchButton.jsx';
 import { useStore } from '../../store/store.js';
 
@@ -20,14 +21,7 @@ export default function StartScreen() {
 			<div className="start-screen__body">
 				<header className='header'>
 					<div className="header__logo logo">WD</div>
-					<nav className="header__menu nav">
-						<div className="nav__item">about</div>
-						<div className="nav__item">services</div>
-						<div className="nav__item">projects</div>
-						<div className="nav__item">steps</div>
-						<div className="nav__item">team</div>
-						<div className="nav__item">contacts</div>
-					</nav>
+					<Navigation extraClasses='header__menu' />
 					<div className="header__theme">
 						<SwitchButton />
 					</div>

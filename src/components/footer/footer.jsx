@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.less';
+import Navigation from '../navigation/navigation.jsx';
 
 export default function Footer() {
 	return (
@@ -12,14 +13,7 @@ export default function Footer() {
 						authorsEmail@gmail.com
 					</a>
 				</div>
-				<ul className="footer-body__nav nav">
-					<li className="nav__item">about</li>
-					<li className="nav__item">services</li>
-					<li className="nav__item">projects</li>
-					<li className="nav__item">steps</li>
-					<li className="nav__item">team</li>
-					<li className="nav__item">contacts</li>
-				</ul>
+				<Navigation extraClasses={'footer-body__nav'} />
 			</div>
 
 		</footer>
