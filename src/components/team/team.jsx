@@ -93,7 +93,7 @@ export default function Team() {
 	const membersList = useStore(state => state.teamMembers);
 
 	return (
-		<section className='team'>
+		<section className='team' id='team'>
 			<div className="team__title section-title">Team</div>
 			<div className="team__body">
 				<Slider {...settings}>

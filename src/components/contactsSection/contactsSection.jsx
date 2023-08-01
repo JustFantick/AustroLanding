@@ -5,7 +5,7 @@ import Form from '../form/form.jsx';
 
 export default function ContactsSection() {
 	return (
-		<section className='contacts-section'>
+		<section className='contacts-section' id='contacts'>
 			<div className="contacts-section__title section-title">Work with us</div>
 			<div className="contacts-section__body">
 				<div className='contacts-section__article'>

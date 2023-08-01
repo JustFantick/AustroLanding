@@ -4,7 +4,7 @@ import background from "../../img/map.png";
 
 export default function About() {
 	return (
-		<section className='about'
+		<section className='about' id='about'
 			style={{
 				backgroundImage: `url(${background})`
 			}}

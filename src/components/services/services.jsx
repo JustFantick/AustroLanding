@@ -9,7 +9,7 @@ export default function Services() {
 	const servicesList = useStore(state => state.servicesList);
 
 	return (
-		<section className='services'>
+		<section className='services' id='services'>
 			<div className="services__body">
 				<h2 className="services__title section-title">Services</h2>
 

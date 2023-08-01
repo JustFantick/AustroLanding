@@ -5,7 +5,7 @@ import StepItem from '../stepItem/stepItem.jsx';
 
 export default function StepsSection() {
 	return (
-		<section className='steps'>
+		<section className='steps' id='steps'>
 			<div className="steps__title section-title">How we work</div>
 			<div className="steps__body steps-container">
 				<div className="steps-container__item generic-article">
