@@ -19,7 +19,7 @@ export default function StartScreen() {
 
 			<div className="start-screen__body">
 				<header className='header'>
-					<div className="header__logo">WD</div>
+					<div className="header__logo logo">WD</div>
 					<nav className="header__menu nav">
 						<div className="nav__item">about</div>
 						<div className="nav__item">services</div>
