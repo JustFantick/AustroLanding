@@ -100,7 +100,7 @@ export default function Team() {
 					{membersList.length !== 0 && membersList.map((member, id) => (
 						<div className="slider-slide" key={id}>
 							<img src={require(`../../img/${member.imgName}`)} alt={member.imgName} />
-							<p>{member.name}</p>
+							<p className='generic-subtitle'>{member.name}</p>
 						</div>
 					))}
 				</Slider>
