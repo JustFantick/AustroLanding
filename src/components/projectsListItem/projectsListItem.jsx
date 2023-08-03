@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { forwardRef, Ref } from 'react';
+import { motion } from 'framer-motion';
 import './projectsListItem.less';
 
-export default function ProjectsListItem(props) {
+export const ProjectsListItem = forwardRef((props, ref) => {
 	return (
-		<li className='projects-list-item'>
+		<li ref={ref} className='projects-list-item'>
 			<a href="#" className='projects-list-item__link-wrapper'>
 				<img className='projects-list-item__img' src={require(`../../img/${props.imgName}`)} alt={props.imgName} />
 				<div className="projects-list-item__caption">
@@ -16,4 +17,6 @@ export default function ProjectsListItem(props) {
 
 		</li>
 	)
-}
+});
+
+export const MotionProjectsListItem = motion(ProjectsListItem);

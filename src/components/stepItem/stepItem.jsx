@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef, Ref } from 'react';
+import { motion } from 'framer-motion';
 import './stepItem.less';
 
-export default function StepItem(props) {
-	return (
-		<div className='step-item'>
-			{props.title}
-		</div>
-	)
-}
+export const StepItem = forwardRef((props, ref) => (
+	<div className='step-item' ref={ref}>
+		{props.title}
+	</div>
+));
+
+export const MotionStepItem = motion(StepItem);

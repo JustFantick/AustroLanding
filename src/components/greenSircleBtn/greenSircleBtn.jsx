@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { forwardRef, Ref } from 'react';
+import { motion } from 'framer-motion';
 import './greenSircleBtn.less';
 
-export default function GreenSircleBtn(props) {
-	return (
-		<div className='green-sircle-btn'>{props.text}</div>
-	)
-}
+export const GreenSircleBtn = forwardRef((props, ref) => (
+	<div className='green-sircle-btn' ref={ref}>{props.text}</div>
+));
+
+export const MotionGreenSircleBtn = motion(GreenSircleBtn);
