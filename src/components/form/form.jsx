@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+
 import './form.less';
+import { slideUpAnim, genAnimDuration } from '../../motionConsts/motionConsts';
 
 export default function Form() {
 	const [name, setName] = useState('');
@@ -49,34 +52,50 @@ export default function Form() {
 	}
 
 	return (
-		<form className='form' action='' method=''>
-			<input className={`form__input generic-text ${isNameCorrect && 'correct'}`}
+		<motion.form className='form' action='' method=''
+			initial='hidden' whileInView='visible'>
+
+			<motion.input
+				variants={slideUpAnim}
+				transition={{ duration: genAnimDuration / 2, type: 'spring', delay: 0.2 }}
+
+				className={`form__input generic-text ${isNameCorrect && 'correct'}`}
 				type="text" name='name' placeholder='Name' required
 				value={name} onChange={(e) => setName(e.target.value)}
-				onBlur={(e) => onBlurHandler(e)}
-			/>
-			<input className={`form__input generic-text ${isEmailCorrect && 'correct'}`}
+				onBlur={(e) => onBlurHandler(e)} />
+			<motion.input
+				variants={slideUpAnim}
+				transition={{ duration: genAnimDuration / 2, type: 'spring', delay: 0.4 }}
+
+				className={`form__input generic-text ${isEmailCorrect && 'correct'}`}
 				type="email" name='email' placeholder='Email' required
 				value={email} onChange={(e) => setEmail(e.target.value)}
-				onBlur={(e) => onBlurHandler(e)}
-			/>
-			<input className="form__input generic-text correct"
+				onBlur={(e) => onBlurHandler(e)} />
+			<motion.input
+				variants={slideUpAnim}
+				transition={{ duration: genAnimDuration / 2, type: 'spring', delay: 0.6 }}
+
+				className="form__input generic-text correct"
 				type="text" name='companyName' placeholder='Company name (optional)'
-				value={companyName} onChange={(e) => setCompanyName(e.target.value)}
-			/>
+				value={companyName} onChange={(e) => setCompanyName(e.target.value)} />
 
 			<div className="form__buttons">
-				<button type='submit'
+				<motion.button
+					variants={slideUpAnim}
+					transition={{ duration: genAnimDuration, type: 'spring', delay: 0.6 }}
 					className={`form-btn submit-btn ${!isSumbitEnable && 'disabled'}`}
-					disabled={!isSumbitEnable}>
+					type='submit' disabled={!isSumbitEnable}>
 					Submit
-				</button>
-				<button type='reset' onClick={onResetClick}
+				</motion.button>
+				<motion.button
+					variants={slideUpAnim}
+					transition={{ duration: genAnimDuration, type: 'spring', delay: 0.8 }}
+					type='reset' onClick={onResetClick}
 					className="form-btn reset-btn">
 					Reset
-				</button>
+				</motion.button>
 			</div>
 
-		</form>
+		</motion.form>
 	)
 }

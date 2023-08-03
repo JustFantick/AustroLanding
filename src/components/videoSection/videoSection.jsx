@@ -1,23 +1,32 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
 import './videoSection.less';
-import GreenSircleBtn from '../greenSircleBtn/greenSircleBtn.jsx';
+import { MotionGreenSircleBtn } from '../greenSircleBtn/greenSircleBtn.jsx';
+import { slideRightAnim, genAnimDuration, scaleItem } from '../../motionConsts/motionConsts';
 
 export default function VideoSection() {
 	return (
-		<section className='video-section'>
+		<motion.section className='video-section'
+			initial='hidden' whileInView='visible'>
 			<div className="video-section__body">
-				<div className="video-section__title">
+				<motion.div className="video-section__title"
+					variants={slideRightAnim}
+					transition={{ duration: genAnimDuration, type: 'spring' }}>
 					Over the years we’ve thought a lot about how we balance being good humans with doing good work and running a good business
-				</div>
+				</motion.div>
 
 				<div className="video-section__video">
 					<img src={require('../../img/video.png')} alt="video.png" />
 
-					<GreenSircleBtn text='play' />
+					<MotionGreenSircleBtn text='play'
+						variants={scaleItem}
+						transition={{ duration: genAnimDuration * 1.5, type: 'spring', delay: 0.75 }}
+					/>
 				</div>
 
 			</div>
 
-		</section>
+		</motion.section>
 	)
 }

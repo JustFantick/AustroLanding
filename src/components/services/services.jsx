@@ -1,9 +1,11 @@
 import React from 'react';
-import './services.less';
+import { motion } from 'framer-motion';
 
+import './services.less';
 import ServicesList from '../servicesList/servicesList.jsx';
-import ServicesListItem from '../servicesListItem/servicesListItem.jsx';
+import { MotionServicesListItem } from '../servicesListItem/servicesListItem.jsx';
 import { useStore } from '../../store/store';
+import { slideLeftAnim, genAnimDuration, slideUpAnim } from '../../motionConsts/motionConsts';
 
 export default function Services() {
 	const servicesList = useStore(state => state.servicesList);
@@ -11,11 +13,20 @@ export default function Services() {
 	return (
 		<section className='services' id='services'>
 			<div className="services__body">
-				<h2 className="services__title section-title">Services</h2>
+				<motion.h2 className="services__title section-title"
+					variants={slideLeftAnim}
+					initial='hidden'
+					whileInView='visible'>
+					Services
+				</motion.h2>
 
 				<ServicesList>
 					{servicesList.map((listItem, id) => (
-						<ServicesListItem
+						<MotionServicesListItem variants={slideUpAnim}
+							initial='hidden'
+							whileInView='visible'
+							transition={{ duration: genAnimDuration, type: 'spring', delay: 0 }}
+
 							key={id}
 							chosen={listItem.chosen}
 							title={listItem.title}

@@ -1,10 +1,13 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
 import './team.less';
 import Slider from 'react-slick';
 import { useStore } from '../../store/store';
+import { slideLeftAnim, genAnimDuration, gridItemAnim } from '../../motionConsts/motionConsts';
 
 export default function Team() {
-	const settings = {
+	const sliderSettings = {
 		dots: false,
 		arrows: false,
 		infinite: false,
@@ -93,19 +96,28 @@ export default function Team() {
 	const membersList = useStore(state => state.teamMembers);
 
 	return (
-		<section className='team' id='team'>
-			<div className="team__title section-title">Team</div>
+		<motion.section
+			initial='hidden' whileInView='visible'
+			className='team' id='team'>
+			<motion.div
+				variants={slideLeftAnim}
+				transition={{ duration: genAnimDuration, type: 'spring' }}
+				className="team__title section-title">
+				Team
+			</motion.div>
 			<div className="team__body">
-				<Slider {...settings}>
+				<Slider {...sliderSettings}>
 					{membersList.length !== 0 && membersList.map((member, id) => (
-						<div className="slider-slide" key={id}>
+						<motion.div className="slider-slide" key={id}
+							variants={gridItemAnim} custom={id}
+							transition={{ duration: genAnimDuration, type: 'spring' }}>
 							<img src={require(`../../img/${member.imgName}`)} alt={member.imgName} />
 							<p className='generic-subtitle'>{member.name}</p>
-						</div>
+						</motion.div>
 					))}
 				</Slider>
 			</div>
 
-		</section>
+		</motion.section>
 	)
 }
