@@ -26,7 +26,6 @@
 		gap: #adapt(15, 10)[@value];
 
 		a {
-			color: @white;
 			font-family: 'Inter';
 			font-size: #adapt(18, 14)[@value];
 			font-style: normal;
@@ -78,6 +77,28 @@
 				grid-template-columns: repeat(3, 1fr);
 				justify-items: start;
 			}
+		}
+	}
+}
+
+.wrapper {
+	&.dark {
+
+		.footer-body__nav a:not(:hover),
+		.footer-body__contacts a {
+			color: @white;
+		}
+	}
+
+	&.light {
+
+		.footer-body__nav a,
+		.footer-body__contacts a {
+			color: @darkBlue;
+		}
+
+		.footer-body__nav a:hover {
+			color: @green;
 		}
 	}
 }
