@@ -1,24 +1,27 @@
 @import url('../../styles/useful.less');
 
 .start-screen {
-	height: 100vh;
+	transition: height 0.25s linear;
+	height: 100dvh;
 	width: 100%;
 
+	position: relative;
+
 	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
 	}
 
-	position: relative;
-
 	&__body {
-		position: absolute;
-		top: 0;
-		left: 0;
+		position: relative;
+		z-index: 10;
 		height: 100%;
-		width: 100%;
 
 		background-color: rgba(0, 0, 0, 0.2);
 		padding: #adapt(50, 15)[@value] #adapt(60, 20)[@value];
@@ -26,7 +29,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		align-items: stretch;
 		gap: 25px;
 
 		>div,
