@@ -48,7 +48,7 @@ module.exports = {
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
-			// favicon: "./src/img/toDoIco.png"
+			favicon: "./src/img/ico.png",
 		}),
 	],
 };
